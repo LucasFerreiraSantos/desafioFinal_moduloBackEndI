@@ -1,0 +1,6 @@
+### Variables
+@url = http://localHost:3333
+
+
+### GET 
+GET {{url}} HTTP/1.1
