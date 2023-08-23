@@ -99,7 +99,7 @@ app.post("/messages", (req, res) => {
 app.get("/messages/:userId", (req, res) => {
   const { userId } = req.params;
 
-  const user = users.find((user) => user.id === user);
+  const user = users.find((user) => user.id === userId);
 
   if (!user) {
     return res.status(404).json({
