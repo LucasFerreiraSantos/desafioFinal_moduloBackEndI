@@ -1,0 +1,113 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "errandsAPI",
+    "dateExported": "2023-08-24T22:54:08.476Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3803b07c-33c6-4b1e-ae3c-3d59eef23211",
+            "colId": "33c83f71-8bc3-420b-8806-6421235f4b23",
+            "containerId": "",
+            "name": "CriarUsuario",
+            "url": "localhost:3333/signup",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-08-24T22:51:27.311Z",
+            "modified": "2023-08-24T22:51:27.311Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Lucas\",\n  \"email\": \"lucas@gmail.com\",\n  \"password\": \"Lucas123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2c20398b-c187-4a77-a4b0-03841ae2db97",
+            "colId": "33c83f71-8bc3-420b-8806-6421235f4b23",
+            "containerId": "",
+            "name": "Fazer login",
+            "url": "localhost:3333/enter",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-08-24T22:52:56.324Z",
+            "modified": "2023-08-24T22:52:56.324Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"lucas@gmail.com\",\n  \"password\": \"lucas123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "66fc9408-f7c7-4d7a-b491-118933e3277d",
+            "colId": "33c83f71-8bc3-420b-8806-6421235f4b23",
+            "containerId": "",
+            "name": "Criar recado",
+            "url": "localhost:3333/messages",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-08-24T22:53:10.100Z",
+            "modified": "2023-08-24T22:53:10.100Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Tarefa final\",\n  \"description\": \"Vou conseguir\",\n  \"userId\": \"920d57c3-172b-4a86-ba5b-d2c9e1b9f831\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1f9842b9-244f-444e-9c2a-9f65803017d7",
+            "colId": "33c83f71-8bc3-420b-8806-6421235f4b23",
+            "containerId": "",
+            "name": "Listar recados",
+            "url": "localhost:3333/messages/920d57c3-172b-4a86-ba5b-d2c9e1b9f831",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-08-24T22:53:18.588Z",
+            "modified": "2023-08-24T22:53:18.588Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "96cd790d-6802-40ed-8b6b-4ccb4f1851b3",
+            "colId": "33c83f71-8bc3-420b-8806-6421235f4b23",
+            "containerId": "",
+            "name": "Atualizar recado",
+            "url": "localhost:3333/messages/8415f4b5-0da2-4e25-b32b-3e75c7d8a046",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-08-24T22:53:24.013Z",
+            "modified": "2023-08-24T22:53:24.013Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Novo title\",\n  \"description\": \"New description\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "824f9e3f-6b2c-4968-8716-56dc1299e03e",
+            "colId": "33c83f71-8bc3-420b-8806-6421235f4b23",
+            "containerId": "",
+            "name": "Excluir recado",
+            "url": "localhost:3333/messages/8415f4b5-0da2-4e25-b32b-3e75c7d8a046",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-08-24T22:53:31.445Z",
+            "modified": "2023-08-24T22:53:31.445Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

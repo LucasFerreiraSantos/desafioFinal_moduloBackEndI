@@ -2,6 +2,7 @@
 import express from "express";
 import { v4 as uuidv4 } from "uuid";
 import bcrypt from "bcrypt";
+import { validateUser } from "./validateUser";
 
 const app = express();
 
@@ -13,7 +14,7 @@ const messages = [];
 app.use(express.json());
 
 //CRIAR O USUÁRIO
-app.post("/signup", async (req, res) => {
+app.post("/signup", validateUser, async (req, res) => {
   const { name, email, password } = req.body;
 
   const checkEmail = users.find((user) => user.email === email);
