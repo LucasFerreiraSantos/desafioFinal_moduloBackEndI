@@ -1,9 +1,9 @@
-import express from "express";
+import { Router } from "express";
 import { v4 as uuidv4 } from "uuid";
 import { messages } from ".";
 import { users } from ".";
 
-const createScrap = express.Router();
+const createScrap = Router();
 
 export default createScrap.post("/", (req, res) => {
   const { title, description, userId } = req.body;

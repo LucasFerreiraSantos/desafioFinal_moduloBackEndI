@@ -1,6 +1,7 @@
 import express from "express";
+import express from "express";
 import bcrypt from "bcrypt";
-import { users } from ".";
+import { users } from "..";
 
 const loginRouter = express.Router();
 

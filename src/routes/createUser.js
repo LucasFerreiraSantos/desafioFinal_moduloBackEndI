@@ -1,10 +1,10 @@
-import express from "express";
-import { validateUser } from "./validateUser";
+import { Router } from "express";
+import { validateUser } from "../middleware/validateUser";
 import bcrypt from "bcrypt";
 import { v4 as uuidv4 } from "uuid";
-import { users } from ".";
+import { users } from "..";
 
-const createRouter = express.Router();
+const createRouter = Router();
 
 export default createRouter.post("/", validateUser, async (req, res) => {
   const { name, email, password } = req.body;

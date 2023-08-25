@@ -1,9 +1,8 @@
 //Importando a biblioteca EXPRESS
 import express from "express";
-import createUser from "./createUser";
-import login from "./login";
-import scrap from "./createScrap";
-
+import createUser from "./routes/createUser";
+import login from "./routes/login";
+import scrap from "./scrap";
 
 const app = express();
 
