@@ -2,11 +2,12 @@ import { Router } from "express";
 import { validateUser } from "../middleware/validateUser";
 import bcrypt from "bcrypt";
 import { v4 as uuidv4 } from "uuid";
-import { users } from "..";
+import { users } from "../data";
 
-const createRouter = Router();
+const router = Router();
 
-export default createRouter.post("/", validateUser, async (req, res) => {
+//CRIAR usuário
+router.post("/create", validateUser, async (req, res) => {
   const { name, email, password } = req.body;
 
   const checkEmail = users.find((user) => user.email === email);
@@ -34,3 +35,31 @@ export default createRouter.post("/", validateUser, async (req, res) => {
     user: newUser,
   });
 });
+
+//LOGIN usuário
+router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+
+  const user = users.find((user) => user.email === email);
+
+  const comparePassword = await bcrypt.compare(password, user.password);
+
+  if (!comparePassword) {
+    return res.status(400).json({
+      message: "Credenciais inválidas!",
+    });
+  }
+
+  if (!user) {
+    return res.status(404).json({
+      message: "Usuário não encontrado!",
+    });
+  }
+
+  res.json({
+    message: "Login bem-sucedido",
+    token: user.id,
+  });
+});
+
+export default router;
