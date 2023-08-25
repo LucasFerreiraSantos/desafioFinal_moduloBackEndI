@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "errandsAPI",
-    "dateExported": "2023-08-25T21:34:00.693Z",
+    "dateExported": "2023-08-25T21:57:42.432Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,12 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2023-08-24T22:51:27.311Z",
-            "modified": "2023-08-25T21:33:00.447Z",
+            "modified": "2023-08-25T21:47:03.087Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"Lucas\",\n  \"email\": \"lucas@gmail.com\",\n  \"password\": \"Lucas123\"\n}",
+                "raw": "{\n  \"name\": \"Lucas\",\n  \"email\": \"lucas22@gmail.com\",\n  \"password\": \"sandra\"\n}",
                 "form": []
             },
             "tests": []
@@ -29,16 +29,16 @@
             "colId": "33c83f71-8bc3-420b-8806-6421235f4b23",
             "containerId": "",
             "name": "Fazer login",
-            "url": "localhost:3333/users/login",
+            "url": "https://desafio-final-back-endi.onrender.com/users/login",
             "method": "POST",
             "sortNum": 20000,
             "created": "2023-08-24T22:52:56.324Z",
-            "modified": "2023-08-25T01:28:46.706Z",
+            "modified": "2023-08-25T21:47:57.402Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"email\": \"lucas@gmail.com\",\n  \"password\": \"Lucas123\"\n}",
+                "raw": "{\n  \"email\": \"lucas22@gmail.com\",\n  \"password\": \"sandra\"\n}",
                 "form": []
             },
             "tests": []
@@ -48,16 +48,16 @@
             "colId": "33c83f71-8bc3-420b-8806-6421235f4b23",
             "containerId": "",
             "name": "Criar recado",
-            "url": "localhost:3333/scrap",
+            "url": "https://desafio-final-back-endi.onrender.com/scrap",
             "method": "POST",
             "sortNum": 30000,
             "created": "2023-08-24T22:53:10.100Z",
-            "modified": "2023-08-25T01:29:13.775Z",
+            "modified": "2023-08-25T21:54:17.526Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"title\": \"Tarefa final\",\n  \"description\": \"Vou conseguir\",\n  \"userId\": \"7a3ad69f-2753-4843-9767-9f0c518ef674\"\n}",
+                "raw": "{\n  \"title\": \"Tarefa final\",\n  \"description\": \"Vou conseguir\",\n  \"userId\": \"e5936fc3-3367-42e4-ac34-cc850ba3d26c\"\n}",
                 "form": []
             },
             "tests": []
@@ -100,11 +100,11 @@
             "colId": "33c83f71-8bc3-420b-8806-6421235f4b23",
             "containerId": "",
             "name": "Excluir recado",
-            "url": "localhost:3333/scrap/8bc65269-24ed-463e-9dcb-f7c2aebd1a16",
+            "url": "https://desafio-final-back-endi.onrender.com/scrap/8bc65269-24ed-463e-9dcb-f7c2aebd1a16",
             "method": "DELETE",
             "sortNum": 60000,
             "created": "2023-08-24T22:53:31.445Z",
-            "modified": "2023-08-25T01:30:16.237Z",
+            "modified": "2023-08-25T21:54:59.881Z",
             "headers": [],
             "params": [],
             "tests": []

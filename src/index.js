@@ -8,7 +8,7 @@ const app = express();
 //Convertendo o EXPRESS em formato JSON
 app.use(express.json());
 
-app.use("/users", users);
+app.use("/users/", users);
 app.use("/scrap", scrap);
 
 //Rodando o servidor!
