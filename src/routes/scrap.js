@@ -35,6 +35,7 @@ router.post("/", (req, res) => {
 //LISTAR recados
 router.get("/:userId", (req, res) => {
   const { userId } = req.params;
+  const { page, perPage } = req.query;
 
   const user = users.find((user) => user.id === userId);
 
@@ -44,9 +45,23 @@ router.get("/:userId", (req, res) => {
     });
   }
 
+  const currentPage = parseInt(page) || 1;
+  const itemsPerPage = parseInt(perPage) || 10;
+
   const usersMessages = messages.filter((message) => message.userId === userId);
 
-  res.json(usersMessages);
+  const totalItems = usersMessages.length;
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  const paginatedMessages = usersMessages.slice(startIndex, endIndex);
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+  res.json({
+    usersMessages: paginatedMessages,
+    totalPages,
+    currentPage,
+  });
 });
 
 //ATUALIZAR recados
@@ -92,4 +107,4 @@ router.delete("/:messageId", (req, res) => {
   });
 });
 
-export default router
+export default router;

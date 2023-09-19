@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.use("/users/", users);
+app.use("/users", users);
 app.use("/scrap", scrap);
 
 //Rodando o servidor!
