@@ -26,7 +26,7 @@ router.post("/", (req, res) => {
 
   messages.push(newMessage);
 
-  res.status(201).json({
+  return res.status(201).json({
     message: "Recado criado com sucesso.",
     newMessage,
   });
@@ -57,7 +57,7 @@ router.get("/:userId", (req, res) => {
   const paginatedMessages = usersMessages.slice(startIndex, endIndex);
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-  res.json({
+  return res.json({
     usersMessages: paginatedMessages,
     totalPages,
     currentPage,
@@ -81,7 +81,7 @@ router.put("/:messageId", (req, res) => {
   messages[messageIndex].title = title;
   messages[messageIndex].description = description;
 
-  res.json({
+  return res.json({
     message: "Recado alterado com sucesso!",
   });
 });
@@ -101,7 +101,7 @@ router.delete("/:messageId", (req, res) => {
 
   const deletedMessage = messages.splice(messageIndex, 1);
 
-  res.json({
+  return res.json({
     message: "Recado deletado!",
     deletedMessage,
   });

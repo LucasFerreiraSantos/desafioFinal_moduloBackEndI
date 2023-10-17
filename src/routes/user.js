@@ -30,7 +30,7 @@ router.post("/create", validateUser, async (req, res) => {
 
   users.push(newUser);
 
-  res.status(201).json({
+  return res.status(201).json({
     message: "Usuário criado com sucesso.",
     user: newUser,
   });
@@ -56,7 +56,7 @@ router.post("/login", async (req, res) => {
     });
   }
 
-  res.json({
+  return res.json({
     message: "Login bem-sucedido",
     token: user.id,
   });
